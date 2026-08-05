@@ -20,7 +20,7 @@ export default function App() {
       {loading && <Preloader onDone={() => setLoading(false)} />}
       <GeoCanvas />
       <Navbar />
-      <main>
+      <main className={loading ? '' : 'is-ready'}>
         <Hero />
         <About />
         <Skills />

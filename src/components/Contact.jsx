@@ -15,7 +15,11 @@ export default function Contact() {
             href="mailto:abishek.kamalarajan@gmail.com?subject=Hello%20from%20your%20Portfolio"
             className="btn solid"
           >
-            ✉ Email
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            Email
           </a>
           <a href="https://github.com/Abishek-Kamalarajan" className="btn" target="_blank" rel="noreferrer">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
