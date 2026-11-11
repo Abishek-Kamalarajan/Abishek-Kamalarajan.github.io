@@ -7,13 +7,16 @@ export default function Preloader({ onDone }) {
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) {
+    let seen = false
+    try { seen = sessionStorage.getItem('preloaded') === '1' } catch { /* storage unavailable */ }
+    if (reduce || seen) {
       onDone()
       return
     }
+    try { sessionStorage.setItem('preloaded', '1') } catch { /* storage unavailable */ }
 
     const start = performance.now()
-    const DURATION = 1600
+    const DURATION = 1100
     let raf
 
     const tick = (now) => {
@@ -26,7 +29,7 @@ export default function Preloader({ onDone }) {
       } else if (!doneRef.current) {
         doneRef.current = true
         setLeaving(true)
-        setTimeout(onDone, 500)
+        setTimeout(onDone, 400)
       }
     }
     raf = requestAnimationFrame(tick)

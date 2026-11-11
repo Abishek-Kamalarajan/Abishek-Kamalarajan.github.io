@@ -4,6 +4,7 @@ import GeoCanvas from './components/GeoCanvas.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
+import Experience from './components/Experience.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Research from './components/Research.jsx'
@@ -18,14 +19,16 @@ export default function App() {
   return (
     <>
       {loading && <Preloader onDone={() => setLoading(false)} />}
+      <a href="#about" className="skip-link">Skip to content</a>
       <GeoCanvas />
       <Navbar />
       <main className={loading ? '' : 'is-ready'}>
         <Hero />
         <About />
+        <Experience />
+        <Research />
         <Skills />
         <Projects />
-        <Research />
         <Education />
         <Contact />
       </main>

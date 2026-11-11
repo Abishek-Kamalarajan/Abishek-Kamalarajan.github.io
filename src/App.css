@@ -98,7 +98,7 @@
 .nav-accent { color: var(--cyan); }
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   font-family: var(--sans);
   font-size: 0.9rem;
 }
@@ -665,7 +665,7 @@
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 760px) {
+@media (max-width: 960px) {
   .nav-toggle { display: flex; }
   .nav-links {
     position: absolute;
@@ -678,9 +678,10 @@
     overflow: hidden;
     transition: max-height 0.3s;
   }
-  .nav-links.nav-open { max-height: 440px; }
+  .nav-links.nav-open { max-height: 560px; }
   .nav-links li { padding: 16px 32px; border-top: 1px solid var(--line); }
   .about-grid { grid-template-columns: 1fr; }
+  .proj-grid { grid-template-columns: 1fr; }
   .hero-scroll { display: none; }
 }
 
@@ -692,3 +693,148 @@
   .hero-badge-dot, .hero-scroll svg { animation: none; }
   .nav-progress { transition: none; }
 }
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--cyan);
+  color: #0a0d12;
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus-visible { transform: none; }
+
+/* ---------- About facts ---------- */
+.about-facts { display: flex; flex-direction: column; gap: 12px; }
+.about-facts li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+}
+.about-fact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--cyan);
+}
+.about-fact-icon svg { width: 18px; height: 18px; }
+.about-fact-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.about-fact-body strong {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* ---------- Experience ---------- */
+.xp-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.xp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: var(--line);
+}
+.xp-item { position: relative; margin-bottom: 20px; }
+.xp-card { padding: 28px 30px; }
+.xp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.xp-title { font-size: 1.25rem; font-weight: 600; margin: 8px 0 4px; letter-spacing: -0.01em; }
+.xp-org { color: var(--cyan); font-size: 0.92rem; }
+.xp-loc { color: var(--text-dim); }
+.xp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 340px;
+  justify-content: flex-end;
+}
+.xp-tags li {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.xp-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.xp-bullets li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+.xp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--cyan);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  .xp-card { padding: 22px 20px; }
+  .xp-tags { justify-content: flex-start; max-width: none; }
+}
+
+/* ---------- Research highlights ---------- */
+.research-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+}
+.research-highlights li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-dim);
+  font-size: 0.93rem;
+}
+.research-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--cyan);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+/* ---------- Footer ---------- */
+.footer-link { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; }
+.footer-link:hover { color: var(--cyan); }

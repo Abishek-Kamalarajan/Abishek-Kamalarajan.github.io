@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const LINKS = ['about', 'skills', 'projects', 'research', 'education', 'contact']
+const LINKS = ['about', 'experience', 'research', 'skills', 'projects', 'education', 'contact']
 
 const MENU_ICON = (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
@@ -49,7 +49,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
+    <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`} aria-label="Primary">
       <a href="#hero" className="nav-logo">
         Abishek <span className="nav-accent">Kamalarajan</span>
       </a>
@@ -58,10 +58,11 @@ export default function Navbar() {
         onClick={() => setOpen(!open)}
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
+        aria-controls="nav-menu"
       >
         {open ? CLOSE_ICON : MENU_ICON}
       </button>
-      <ul className={`nav-links ${open ? 'nav-open' : ''}`}>
+      <ul id="nav-menu" className={`nav-links ${open ? 'nav-open' : ''}`}>
         {LINKS.map((l) => (
           <li key={l}>
             <a

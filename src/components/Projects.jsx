@@ -36,17 +36,12 @@ const PROJECTS = [
     repo: 'https://github.com/Abishek-Kamalarajan/Snake-Game',
     status: 'Live',
   },
-  {
-    name: 'Project 03',
-    desc: 'A project built during my HDIT studies — details coming soon.',
-    stack: ['TBA'],
-  },
 ]
 
 export default function Projects() {
   return (
     <section id="projects" className="section reveal">
-      <div className="section-tag">03 — projects</div>
+      <div className="section-tag">05 — projects</div>
       <h2 className="section-title">
         Selected <span>work</span>
       </h2>
@@ -84,7 +79,9 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <p className="proj-note">More projects coming soon — built while studying HDIT.</p>
+      <p className="proj-note">
+        Small builds from my HDIT coursework. My main technical work is the LUTI research model above — more GIS projects are on the way.
+      </p>
     </section>
   )
 }

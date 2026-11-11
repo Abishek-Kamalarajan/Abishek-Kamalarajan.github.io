@@ -9,7 +9,7 @@
   --cyan-bright: #67e8f9;
   --cyan-dim: rgba(34, 211, 238, 0.35);
   --text: #d8e2e8;
-  --text-dim: #7a8b95;
+  --text-dim: #8b9ca7;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
   --sans: 'Space Grotesk', system-ui, sans-serif;
 }
@@ -153,6 +153,7 @@ ul { list-style: none; }
 }
 
 .btn {
+  min-height: 44px;
   font-family: var(--sans);
   font-size: 0.9rem;
   letter-spacing: 0.02em;
@@ -162,7 +163,7 @@ ul { list-style: none; }
   color: var(--text);
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.1s ease;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -200,21 +201,21 @@ ul { list-style: none; }
 }
 
 /* staggered child reveal inside grids/lists */
-.reveal :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > * {
+.reveal :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > * {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > * {
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > * {
   opacity: 1;
   transform: none;
 }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > :nth-child(1) { transition-delay: 0.05s; }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > :nth-child(2) { transition-delay: 0.13s; }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > :nth-child(3) { transition-delay: 0.21s; }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > :nth-child(4) { transition-delay: 0.29s; }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > :nth-child(5) { transition-delay: 0.37s; }
-.reveal.visible :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > :nth-child(n + 6) { transition-delay: 0.45s; }
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > :nth-child(1) { transition-delay: 0.05s; }
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > :nth-child(2) { transition-delay: 0.13s; }
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > :nth-child(3) { transition-delay: 0.21s; }
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > :nth-child(4) { transition-delay: 0.29s; }
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > :nth-child(5) { transition-delay: 0.37s; }
+.reveal.visible :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > :nth-child(n + 6) { transition-delay: 0.45s; }
 
 @media (max-width: 640px) {
   .section { padding: 88px 20px; }
@@ -223,7 +224,7 @@ ul { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { transition: none; opacity: 1; transform: none; }
-  .reveal :is(.skills-grid, .proj-grid, .about-stats, .edu-timeline, .research-tools-list) > * {
+  .reveal :is(.skills-grid, .proj-grid, .about-facts, .edu-timeline, .xp-timeline, .research-tools-list) > * {
     transition: none;
     opacity: 1;
     transform: none;

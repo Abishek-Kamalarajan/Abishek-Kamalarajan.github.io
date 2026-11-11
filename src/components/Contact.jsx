@@ -1,14 +1,14 @@
 export default function Contact() {
   return (
     <section id="contact" className="section reveal">
-      <div className="section-tag">06 — contact</div>
+      <div className="section-tag">07 — contact</div>
       <h2 className="section-title">
         Get in <span>touch</span>
       </h2>
       <div className="panel contact-card">
         <p className="contact-lead">
-          Open to collaborations, interesting problems, and good conversations.
-          Drop a ping.
+          I&apos;m open to GIS and Geospatial Analyst roles, research collaborations
+          and interesting spatial problems. Based in Hatton, Sri Lanka.
         </p>
         <div className="contact-links">
           <a
@@ -36,7 +36,8 @@ export default function Contact() {
         </div>
       </div>
       <footer className="footer coords">
-        © {new Date().getFullYear()} — built with React + Vite &nbsp;//&nbsp; built by Abishek Kamalarajan
+        © {new Date().getFullYear()} Abishek Kamalarajan &nbsp;//&nbsp; built with React + Vite
+        &nbsp;//&nbsp; <a href="https://github.com/Abishek-Kamalarajan/Abishek-Kamalarajan.github.io" target="_blank" rel="noreferrer" className="footer-link">source</a>
       </footer>
     </section>
   )

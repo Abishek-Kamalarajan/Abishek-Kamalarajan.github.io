@@ -18,25 +18,28 @@ export default function Hero() {
       <div className="hero-inner">
         <span className="hero-badge">
           <span className="hero-badge-dot" aria-hidden="true" />
-          Open to opportunities
+          Open to Geospatial Analyst roles
         </span>
         <p className="hero-greet">Hello, I&apos;m</p>
         <h1 className="hero-name">
           Abishek <span>Kamalarajan</span>
         </h1>
-        <h2 className="hero-role">Surveyor &amp; GIS Analyst</h2>
+        <p className="hero-role">Geospatial Data Analyst &amp; Surveyor</p>
         <p className="hero-desc">
-          I turn the physical world into precise spatial data — combining
-          surveying science with GIS, remote sensing and a developer&apos;s
-          toolkit to map, analyze and visualize geography.
+          Final-year Surveying Sciences undergraduate specialising in GIS. I
+          combine field surveying, spatial analysis and Python to turn raw
+          measurements into maps, models and decisions for urban planning and
+          the environment.
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn solid">View Work {ARROW_DOWN}</a>
-          <a href="#contact" className="btn">Get in Touch</a>
+          <a href="#experience" className="btn solid">View Work {ARROW_DOWN}</a>
+          <a href="/resume.pdf" className="btn" target="_blank" rel="noreferrer">
+            Download CV
+          </a>
         </div>
         <p className="hero-meta coords">
           <span className="hero-meta-icon">{CROSSHAIR}</span>
-          7.8731° N, 80.7718° E — Sri Lanka
+          6.8916° N, 80.5955° E — Hatton, Sri Lanka
         </p>
       </div>
       <a href="#about" className="hero-scroll" aria-label="Scroll to about section">

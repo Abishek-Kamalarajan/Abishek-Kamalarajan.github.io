@@ -45,21 +45,28 @@ const STACK = [
       </svg>
     ),
   },
+  { name: 'PyCharm', logo: 'pycharm' },
   { name: 'Jupyter Notebook', logo: 'jupyter' },
+]
+
+const HIGHLIGHTS = [
+  'Designed and implemented a macroscopic LUTI model with Python, AequilibraE and UrbanSim to simulate multi-modal transport scenarios across the Kandy district.',
+  'Engineered geospatial workflows and spatial algorithms to evaluate urbanisation-driven trends and sustainable-development metrics.',
+  'Directed data acquisition, sourcing and integrating 2024 transport datasets from the RDA, NTC and the Department of Census and Statistics.',
 ]
 
 export default function Research() {
   return (
     <section id="research" className="section reveal">
-      <div className="section-tag">04 — research</div>
+      <div className="section-tag">03 — research</div>
       <h2 className="section-title">
         Undergraduate <span>research</span>
       </h2>
       <div className="panel research-card">
         <div className="research-head">
           <div>
-            <span className="coords">Sabaragamuwa University of Sri Lanka</span>
-            <h3 className="research-title">LUTI-Kandy — Land-Use Transport Interaction Model</h3>
+            <span className="coords">Sabaragamuwa University of Sri Lanka · Aug 2025 — Jun 2026</span>
+            <h3 className="research-title">Integrated Land-Use Transport Interaction (LUTI) Model for Sustainable Urban Growth in Kandy</h3>
           </div>
           <a
             href="https://github.com/Abishek-Kamalarajan/LUTI-Kandy"
@@ -83,6 +90,12 @@ export default function Research() {
           trip demand, network assignment and land-use simulation across 1,202 traffic
           analysis zones.
         </p>
+
+        <ul className="research-highlights">
+          {HIGHLIGHTS.map((h) => (
+            <li key={h}>{h}</li>
+          ))}
+        </ul>
 
         <ul className="research-stats">
           {STATS.map((s) => (
