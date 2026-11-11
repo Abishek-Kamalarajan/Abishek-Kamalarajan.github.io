@@ -1,10 +1,11 @@
 import BrandIcon from './BrandIcon.jsx'
+import ScenarioChart from './ScenarioChart.jsx'
 
 const STATS = [
   { value: '1,940 km²', label: 'study area — Kandy district' },
   { value: '949,906', label: 'daily trips modeled' },
   { value: '17,754', label: 'road links simulated' },
-  { value: '12%', label: 'emissions cut, best scenario' },
+  { value: '12%', label: 'fewer vehicle-km with BRT' },
 ]
 
 const SCENARIOS = [
@@ -113,6 +114,43 @@ export default function Research() {
               <span className="research-scenario-desc">{s.desc}</span>
             </div>
           ))}
+        </div>
+
+        <ScenarioChart />
+
+        <div className="research-figures">
+          <figure className="research-figure">
+            <a href="https://github.com/Abishek-Kamalarajan/LUTI-Kandy/blob/main/results/step27D_spatial_density_2046.png" target="_blank" rel="noreferrer">
+              <img
+                src="/research/density-2046.webp"
+                width="1600"
+                height="1414"
+                loading="lazy"
+                decoding="async"
+                alt="Four maps of Kandy district showing zone-level population density in 2046 for the baseline, highway bypass, BRT and TOD scenarios"
+              />
+            </a>
+            <figcaption>
+              <span className="coords">Step 27D</span>
+              Zone-level population density at 2046, one point per traffic analysis zone, across all four scenarios.
+            </figcaption>
+          </figure>
+          <figure className="research-figure">
+            <a href="https://github.com/Abishek-Kamalarajan/LUTI-Kandy/blob/main/results/step27B_radar_chart.png" target="_blank" rel="noreferrer">
+              <img
+                src="/research/radar-2046.webp"
+                width="1200"
+                height="988"
+                loading="lazy"
+                decoding="async"
+                alt="Radar chart comparing the four scenarios on urban compactness, housing affordability, traffic performance and air quality, scored 0 to 10"
+              />
+            </a>
+            <figcaption>
+              <span className="coords">Step 27B</span>
+              Multi-criteria radar at 2046. Scenario C scores best overall; the bypass trails on air quality and traffic.
+            </figcaption>
+          </figure>
         </div>
 
         <div className="research-tools">

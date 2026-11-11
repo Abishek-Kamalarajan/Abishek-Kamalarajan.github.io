@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import Preloader from './components/Preloader.jsx'
+import { useEffect, useState } from 'react'
 import GeoCanvas from './components/GeoCanvas.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
@@ -11,18 +10,23 @@ import Research from './components/Research.jsx'
 import Education from './components/Education.jsx'
 import Contact from './components/Contact.jsx'
 import useReveal from './hooks/useReveal.js'
+import useSpotlight from './hooks/useSpotlight.js'
 import './App.css'
 
 export default function App() {
-  const [loading, setLoading] = useState(true)
+  const [ready, setReady] = useState(false)
   useReveal()
+  useSpotlight()
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setReady(true))
+    return () => cancelAnimationFrame(id)
+  }, [])
   return (
     <>
-      {loading && <Preloader onDone={() => setLoading(false)} />}
       <a href="#about" className="skip-link">Skip to content</a>
       <GeoCanvas />
       <Navbar />
-      <main className={loading ? '' : 'is-ready'}>
+      <main className={ready ? 'is-ready' : ''}>
         <Hero />
         <About />
         <Experience />

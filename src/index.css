@@ -231,5 +231,4 @@ ul { list-style: none; }
   }
   .panel, .panel:hover { transform: none; }
   #bg-canvas { opacity: 0.3; }
-  .pre-mark { animation: none; }
 }

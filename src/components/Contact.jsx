@@ -36,6 +36,12 @@ export default function Contact() {
         </div>
       </div>
       <footer className="footer coords">
+        <a href="#hero" className="to-top" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+          </svg>
+          <span>top</span>
+        </a>
         © {new Date().getFullYear()} Abishek Kamalarajan &nbsp;//&nbsp; built with React + Vite
         &nbsp;//&nbsp; <a href="https://github.com/Abishek-Kamalarajan/Abishek-Kamalarajan.github.io" target="_blank" rel="noreferrer" className="footer-link">source</a>
       </footer>
