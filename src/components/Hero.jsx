@@ -12,8 +12,6 @@ const CROSSHAIR = (
   </svg>
 )
 
-import HeroVisual from './HeroVisual.jsx'
-
 export default function Hero() {
   return (
     <section id="hero" className="hero">
@@ -44,7 +42,22 @@ export default function Hero() {
           6.8916° N, 80.5955° E — Hatton, Sri Lanka
         </p>
       </div>
-      <HeroVisual />
+      <div className="hero-visual">
+        <div className="hero-portrait">
+          <img
+            src="/portrait.webp"
+            width="640"
+            height="640"
+            alt="Abishek Kamalarajan"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <span className="hero-portrait-tag coords" aria-hidden="true">
+          <span className="hero-badge-dot" />
+          Surveyor · GIS
+        </span>
+      </div>
       <a href="#about" className="hero-scroll" aria-label="Scroll to about section">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="m6 9 6 6 6-6" />
