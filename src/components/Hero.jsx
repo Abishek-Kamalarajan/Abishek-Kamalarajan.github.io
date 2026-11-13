@@ -12,6 +12,9 @@ const CROSSHAIR = (
   </svg>
 )
 
+import TypeRole from './TypeRole.jsx'
+import PortraitMeta from './PortraitMeta.jsx'
+
 export default function Hero() {
   return (
     <section id="hero" className="hero">
@@ -24,7 +27,7 @@ export default function Hero() {
         <h1 className="hero-name">
           Abishek <span>Kamalarajan</span>
         </h1>
-        <p className="hero-role">Geospatial Data Analyst &amp; Surveyor</p>
+        <TypeRole />
         <p className="hero-desc">
           Final-year Surveying Sciences undergraduate specialising in GIS. I
           combine field surveying, spatial analysis and Python to turn raw
@@ -53,10 +56,7 @@ export default function Hero() {
             decoding="async"
           />
         </div>
-        <span className="hero-portrait-tag coords" aria-hidden="true">
-          <span className="hero-badge-dot" />
-          Surveyor · GIS
-        </span>
+        <PortraitMeta />
       </div>
       <a href="#about" className="hero-scroll" aria-label="Scroll to about section">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
